@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ANIMACIONES</title>
+  <style>
+    #container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    #container > div {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+    }
+
+    span {
+      color: white;
+      font-size: 3em;
+      display: flex;
+      justify-content: center;
+    }
+
+    /* Animación 1*/
+    @keyframes example-1 {
+      from {background-color: red;}
+      to {background-color: yellow;}
+    }
+
+    #container > div:nth-child(1) {
+      animation-name: example-1;
+      animation-duration: 4s;
+    }
+
+    /* Animación 2 */
+    @keyframes example-2 {
+      0% {background-color: red;}
+      25% {background-color: yellow;}
+      50% {background-color: blue;}
+      50% {background-color: green;}
+      100% {background-color: red;}
+    }
+
+    #container > div:nth-child(2) {
+      animation-name: example-2;
+      animation-duration: 4s;
+    }
+
+    /* Animación 3 */
+    @keyframes example-3 {
+      0% {background-color:red; left:0px; top:0px;}
+      25% {background-color:yellow; left:200px; top:0px;}
+      50% {background-color:blue; left:200px; top:200px;}
+      75% {background-color:green; left:0px; top:200px;}
+      100% {background-color:red; left:0px; top:0px;}
+    }
+
+    #container > div:nth-child(3) {
+      position: relative;
+      animation-name: example-3;
+      animation-duration: 4s;
+    }
+
+    /* Animación 4 */
+    #container > div:nth-child(4) {
+      animation-name: example-1;
+      animation-duration: 4s;
+      animation-delay: 2s;
+    }
+
+    /* Animación 5 */
+    #container > div:nth-child(5)  {
+      animation-name: example-1;
+      animation-duration: 4s;
+      animation-delay: -2s;
+    }
+
+    /* Animación 6 */
+    #container > div:nth-child(6) {   
+      animation-name: example-1;
+      animation-duration: 4s;
+      animation-iteration-count: 3;
+    }
+
+    /* Animación 7 */
+    #container > div:nth-child(7) {
+      animation-name: example-1;
+      animation-duration: 4s;
+      animation-iteration-count: infinite;
+    }
+
+    /* Animación 7 */
+    #container > div:nth-child(7) {
+      animation-name: example-1;
+      animation-duration: 4s;
+      animation-iteration-count: infinite;
+    }
+
+    /* Animación 8 */
+    #container > div:nth-child(8) {
+      animation-name: example-1;
+      animation-duration: 4s;
+      animation-direction: reverse;
+    }
+
+    /* Animación 9 */
+    #container > div:nth-child(9) {
+      animation-name: example-1;
+      animation-duration: 4s;
+      animation-iteration-count: 2;
+      animation-direction: alternate;
+    }
+
+    /* Animación 10 */
+    #container > div:nth-child(10) {
+      animation-name: example-1;
+      animation-duration: 4s;
+      animation-iteration-count: 2;
+      animation-direction: alternate-reverse;
+    }
+
+    /* Animación 11 */
+    @keyframes example-4 {
+      0% {background-color: red;}
+      50% {background-color: green;}
+      100% {background-color: yellow;}
+    }
+
+    #container > div:nth-child(11) {
+      animation-name: example-4;
+      animation-duration: 3s;
+      animation-delay: 2s;
+      animation-fill-mode: forwards;
+    }
+
+    /* Animación 12 */
+    #container > div:nth-child(12) {
+      animation-name: example-4;
+      animation-duration: 3s;
+      animation-delay: 2s;
+      animation-direction: reverse;
+      animation-fill-mode: backwards;
+    }
+
+    /* Animación 13 */
+    #container > div:nth-child(13) {
+      animation-name: example-4;
+      animation-duration: 3s;
+      animation-delay: 2s;
+      animation-direction: reverse;
+      animation-fill-mode: both;
+    }
+
+    /* Animación 14 */
+    #container > div:nth-child(14) {
+      /*
+      animation-name: example-1;
+      animation-duration: 5s;
+      animation-timing-function: linear;
+      animation-delay: 2s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      */
+      animation: example-1 5s linear 2s infinite alternate;
+    }
+  </style> 
+</head>
+<body>
+  <div id="container">
+    <div><span>1</span></div>
+    <div><span>2</span></div>
+    <div><span>3</span></div>
+    <div><span>4</span></div>
+    <div><span>5</span></div>
+    <div><span>6</span></div>
+    <div><span>7</span></div>
+    <div><span>8</span></div>
+    <div><span>9</span></div>
+    <div><span>10</span></div>
+    <div><span>11</span></div>
+    <div><span>12</span></div>
+    <div><span>13</span></div>
+    <div><span>14</span></div>    
+  </div>
+</body>
+</html>
+
